@@ -90,4 +90,5 @@ web/build/config/buildinfo.properties
 # Coverage
 .coverage*
 output.txt
-*.csv
+
+*.xml
