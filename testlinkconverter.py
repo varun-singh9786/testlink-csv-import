@@ -142,6 +142,10 @@ with open(file_path) as f:
                 current_step = TestCaseStep()
                 curr_csv_state = TEST_CASE_STEP
                 continue
+            elif "Preconditions:" in line[0]:
+                current_test_case.preconditions = line[0]
+                curr_csv_state = TEST_CASE_STEP_TITLE
+                continue
             else:
                 curr_csv_state = TEST_CASE_SUMMARY
             continue
